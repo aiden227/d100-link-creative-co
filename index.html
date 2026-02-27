@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Creative Co | Organic Social Media for Chicago Businesses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #DAA520;
+            --gold-light: #E8C44A;
+            --black: #000000;
+            --dark: #111111;
+            --dark-alt: #1A1A1A;
+            --white: #FFFFFF;
+            --off-white: #F5F5F5;
+            --gray: #999999;
+            --dark-gray: #333333;
+        }
+        * { font-family: 'DM Sans', sans-serif; }
+        body { background-color: var(--black); color: var(--off-white); }
+        .bg-gold { background-color: var(--gold); }
+        .text-gold { color: var(--gold); }
+        .bg-dark { background-color: var(--dark); }
+        .bg-dark-alt { background-color: var(--dark-alt); }
+        .border-gold { border-color: var(--gold); }
+        .btn-gold {
+            background-color: var(--gold);
+            color: var(--white);
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-gold:hover { background-color: var(--gold-light); transform: translateY(-1px); }
+        .form-step { display: none; }
+        .form-step.active { display: block; }
+        .form-option {
+            background: var(--dark-alt);
+            border: 2px solid var(--dark-gray);
+            border-radius: 12px;
+            padding: 16px 24px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--off-white);
+        }
+        .form-option:hover { border-color: var(--gold); background: #222; }
+        .form-option.selected { border-color: var(--gold); background: rgba(218,165,32,0.1); }
+        .form-input {
+            background: var(--dark-alt);
+            border: 2px solid var(--dark-gray);
+            border-radius: 8px;
+            padding: 14px 18px;
+            color: var(--off-white);
+            font-size: 15px;
+            width: 100%;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .form-input:focus { border-color: var(--gold); }
+        .form-input::placeholder { color: var(--gray); }
+        .progress-bar { height: 4px; background: var(--dark-gray); border-radius: 2px; overflow: hidden; }
+        .progress-fill { height: 100%; background: var(--gold); transition: width 0.3s ease; border-radius: 2px; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-answer.open { max-height: 500px; }
+        .faq-chevron { transition: transform 0.3s ease; }
+        .faq-chevron.open { transform: rotate(180deg); }
+        .stat-card {
+            background: var(--dark-alt);
+            border: 1px solid var(--dark-gray);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+        }
+        .case-card {
+            border-radius: 16px;
+            overflow: hidden;
+            background: var(--dark-alt);
+            border: 1px solid var(--dark-gray);
+        }
+        .section-padding { padding: 80px 0; }
+        @media (max-width: 768px) { .section-padding { padding: 48px 0; } }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-gray-800/50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <img src="images/logo_white.png" alt="Link Creative" class="h-7">
+        <div class="hidden md:flex items-center gap-8 text-sm text-gray-300">
+            <a href="#results" class="hover:text-white transition">Results</a>
+            <a href="#process" class="hover:text-white transition">Process</a>
+            <a href="#proof" class="hover:text-white transition">Case Studies</a>
+            <a href="#faq" class="hover:text-white transition">FAQ</a>
+        </div>
+        <a href="#form" class="btn-gold text-sm !py-3 !px-6">Book a Free Call</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative min-h-screen flex items-center pt-20" style="background: linear-gradient(135deg, #000 0%, #111 50%, #0a0a0a 100%);">
+    <div class="absolute inset-0 opacity-10" style="background-image: url('images/discovered_portfolio_vanloy_Flora-5_Compressed.jpg'); background-size: cover; background-position: center;"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black"></div>
+    <div class="relative max-w-6xl mx-auto px-6 py-16 md:py-24 w-full">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <p class="text-gold text-sm font-semibold tracking-widest uppercase mb-4">Organic Social Media for Chicago Businesses</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                    Stop Posting and Hoping.<br>
+                    <span class="text-gold">Start Getting Leads.</span>
+                </h1>
+                <p class="text-lg text-gray-300 mb-8 leading-relaxed max-w-xl">
+                    Link Creative's Content Engine System turns your social media into a lead generation machine. 50+ qualified leads in 90 days, guaranteed, or we work for free.
+                </p>
+                <div class="flex items-center gap-6 mb-8">
+                    <div class="flex items-center gap-2 text-sm text-gray-400">
+                        <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                        <span>50+ Leads Guaranteed</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm text-gray-400">
+                        <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                        <span>Chicago-Based Team</span>
+                    </div>
+                </div>
+
+                <!-- VSL Placeholder -->
+                <div class="bg-dark-alt border border-gray-800 rounded-2xl aspect-video flex items-center justify-center mb-6 relative overflow-hidden">
+                    <img src="images/discovered_portfolio_caputos_Caputos-South-Elgin-1911.jpg" alt="Video thumbnail" class="absolute inset-0 w-full h-full object-cover opacity-30">
+                    <div class="relative z-10 text-center">
+                        <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-3 cursor-pointer hover:bg-yellow-500 transition">
+                            <svg class="w-7 h-7 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.84A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.27l9.344-5.891a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+                        </div>
+                        <p class="text-sm text-gray-400">Watch: How Chicago businesses are getting 50+ leads/month from social</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORM -->
+            <div id="form" class="bg-dark border border-gray-800 rounded-2xl p-8">
+                <h3 class="text-xl font-bold text-white mb-2 text-center">See If Your Business Qualifies</h3>
+                <p class="text-sm text-gray-400 mb-6 text-center">Answer a few quick questions to find out if the Content Engine System is right for you.</p>
+                <div class="progress-bar mb-6"><div id="progress1" class="progress-fill" style="width: 25%"></div></div>
+                <p id="stepLabel1" class="text-xs text-gray-500 mb-4 text-center">Step 1 of 5</p>
+
+                <!-- Step 1 -->
+                <div id="step1-1" class="form-step active">
+                    <p class="text-sm font-semibold text-white mb-4">What industry is your business in?</p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="form-option" onclick="selectOption(1,'Restaurant / Hospitality',this)">Restaurant / Hospitality</div>
+                        <div class="form-option" onclick="selectOption(1,'Retail / E-commerce',this)">Retail / E-commerce</div>
+                        <div class="form-option" onclick="selectOption(1,'Health & Wellness',this)">Health & Wellness</div>
+                        <div class="form-option" onclick="selectOption(1,'Home Services',this)">Home Services</div>
+                        <div class="form-option" onclick="selectOption(1,'Professional Services',this)">Professional Services</div>
+                        <div class="form-option" onclick="selectOption(1,'Other',this)">Other</div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div id="step1-2" class="form-step">
+                    <p class="text-sm font-semibold text-white mb-4">How are you currently handling your social media?</p>
+                    <div class="grid gap-3">
+                        <div class="form-option" onclick="selectOption(2,'We do it ourselves (inconsistently)',this)">We do it ourselves (inconsistently)</div>
+                        <div class="form-option" onclick="selectOption(2,'We have someone in-house',this)">We have someone in-house</div>
+                        <div class="form-option" onclick="selectOption(2,'We use a freelancer or agency',this)">We use a freelancer or agency</div>
+                        <div class="form-option" onclick="selectOption(2,'Not doing anything right now',this)">We're not doing anything right now</div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div id="step1-3" class="form-step">
+                    <p class="text-sm font-semibold text-white mb-4">What's your biggest challenge with social media?</p>
+                    <div class="grid gap-3">
+                        <div class="form-option" onclick="selectOption(3,'No time to post consistently',this)">No time to post consistently</div>
+                        <div class="form-option" onclick="selectOption(3,'Content doesn\'t look professional',this)">Content doesn't look professional</div>
+                        <div class="form-option" onclick="selectOption(3,'Not seeing results from what we post',this)">Not seeing results from what we post</div>
+                        <div class="form-option" onclick="selectOption(3,'Don\'t know what strategy to follow',this)">Don't know what strategy to follow</div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div id="step1-4" class="form-step">
+                    <p class="text-sm font-semibold text-white mb-4">When are you looking to get started?</p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="form-option" onclick="selectOption(4,'Immediately',this)">Immediately</div>
+                        <div class="form-option" onclick="selectOption(4,'Within 30 days',this)">Within 30 days</div>
+                        <div class="form-option" onclick="selectOption(4,'Within 90 days',this)">Within 90 days</div>
+                        <div class="form-option" onclick="selectOption(4,'Just exploring',this)">Just exploring</div>
+                    </div>
+                </div>
+
+                <!-- Step 5: Contact Info -->
+                <div id="step1-5" class="form-step">
+                    <p class="text-sm font-semibold text-white mb-4">Almost there. Where should we send your strategy call details?</p>
+                    <div class="space-y-3">
+                        <div class="grid grid-cols-2 gap-3">
+                            <input type="text" class="form-input" placeholder="First Name" id="fname1">
+                            <input type="text" class="form-input" placeholder="Last Name" id="lname1">
+                        </div>
+                        <input type="email" class="form-input" placeholder="Email" id="email1">
+                        <input type="tel" class="form-input" placeholder="Phone Number" id="phone1">
+                        <button class="btn-gold w-full text-center mt-2" onclick="submitForm1()">Book My Free Strategy Call</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SOCIAL PROOF BAR -->
+<section class="bg-dark-alt border-y border-gray-800/50 py-8">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+            <div>
+                <p class="text-2xl md:text-3xl font-bold text-gold">20+</p>
+                <p class="text-xs text-gray-400 mt-1">Local Businesses Served</p>
+            </div>
+            <div>
+                <p class="text-2xl md:text-3xl font-bold text-gold">17M+</p>
+                <p class="text-xs text-gray-400 mt-1">Impressions Generated</p>
+            </div>
+            <div>
+                <p class="text-2xl md:text-3xl font-bold text-gold">747%</p>
+                <p class="text-xs text-gray-400 mt-1">Best Client ROAS</p>
+            </div>
+            <div>
+                <p class="text-2xl md:text-3xl font-bold text-gold">7</p>
+                <p class="text-xs text-gray-400 mt-1">Full-Time Team Members</p>
+            </div>
+            <div class="col-span-2 md:col-span-1">
+                <p class="text-2xl md:text-3xl font-bold text-gold">3</p>
+                <p class="text-xs text-gray-400 mt-1">In-House Studios</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOUNDER / AUTHORITY -->
+<section class="section-padding" id="results">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <img src="images/discovered_about_26A_0614.jpg" alt="Lorenzo Costa, Founder & CEO" class="rounded-2xl w-full object-cover" style="max-height: 500px;">
+                <div class="absolute bottom-4 left-4 bg-black/80 backdrop-blur-sm rounded-xl px-4 py-3">
+                    <p class="text-white font-semibold text-sm">Lorenzo Costa</p>
+                    <p class="text-gold text-xs">Founder & CEO</p>
+                </div>
+            </div>
+            <div>
+                <p class="text-gold text-sm font-semibold tracking-widest uppercase mb-3">Meet the Founder</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Built for local businesses that deserve better marketing.</h2>
+                <p class="text-gray-300 mb-6 leading-relaxed">Lorenzo Costa founded Link Creative in 2023 with a simple belief: local businesses in Chicago deserve the same quality of marketing that big brands get, without the big brand price tag.</p>
+                <p class="text-gray-300 mb-6 leading-relaxed">Today, Link Creative is a 7-person team with three in-house production studios (Link Label Studios), a roster of Chicago's best local brands, and a proven system for turning organic social media into a lead generation engine.</p>
+                <div class="space-y-3">
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-gold mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                        <span class="text-gray-300 text-sm">20+ local businesses served across Chicago</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-gold mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                        <span class="text-gray-300 text-sm">Speaker at Chicago Build Expo 2024</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-gold mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                        <span class="text-gray-300 text-sm">Host of the Link Live podcast</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-gold mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                        <span class="text-gray-300 text-sm">3 in-house production studios (Link Label Studios)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="section-padding bg-dark-alt">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+        <p class="text-gold text-sm font-semibold tracking-widest uppercase mb-3">The Problem</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Your Social Media Isn't Working Because You Don't Have a System</h2>
+        <p class="text-gray-400 mb-12 max-w-2xl mx-auto">You know social media matters. You see your competitors building their brands online every day. But here's what's actually happening on your end.</p>
+        <div class="grid md:grid-cols-2 gap-6 text-left">
+            <div class="bg-black/50 border border-gray-800 rounded-xl p-6">
+                <div class="text-gold text-2xl mb-3">01</div>
+                <h3 class="text-white font-semibold mb-2">You post when you remember to</h3>
+                <p class="text-gray-400 text-sm">Which is maybe twice a month. The algorithm has no idea who you are, so it shows your content to nobody.</p>
+            </div>
+            <div class="bg-black/50 border border-gray-800 rounded-xl p-6">
+                <div class="text-gold text-2xl mb-3">02</div>
+                <h3 class="text-white font-semibold mb-2">The content doesn't look like your brand</h3>
+                <p class="text-gray-400 text-sm">You tried Canva templates and freelancers. The posts looked generic and could belong to any business in any city.</p>
+            </div>
+            <div class="bg-black/50 border border-gray-800 rounded-xl p-6">
+                <div class="text-gold text-2xl mb-3">03</div>
+                <h3 class="text-white font-semibold mb-2">You can't measure anything</h3>
+                <p class="text-gray-400 text-sm">You see likes and impressions but have no idea if any of it is turning into actual customers walking through your door.</p>
+            </div>
+            <div class="bg-black/50 border border-gray-800 rounded-xl p-6">
+                <div class="text-gold text-2xl mb-3">04</div>
+                <h3 class="text-white font-semibold mb-2">You don't have time</h3>
+                <p class="text-gray-400 text-sm">Between payroll, employees, and customers, social media is always the thing that gets pushed to tomorrow.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SOLUTION / PROCESS -->
+<section class="section-padding" id="process">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <p class="text-gold text-sm font-semibold tracking-widest uppercase mb-3">The Solution</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">The Content Engine System</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">A complete organic social media system built for local businesses in Chicago.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="stat-card">
+                <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                </div>
+                <h3 class="text-white font-semibold mb-2">Brand Voice Blueprint</h3>
+                <p class="text-gray-400 text-sm">We decode your brand's DNA and build a messaging framework that makes every post sound like you.</p>
+            </div>
+            <div class="stat-card">
+                <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                </div>
+                <h3 class="text-white font-semibold mb-2">30-Day Content Pipeline</h3>
+                <p class="text-gray-400 text-sm">One production session per month. We shoot, edit, caption, and schedule a full month of professional content.</p>
+            </div>
+            <div class="stat-card">
+                <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <h3 class="text-white font-semibold mb-2">Community Growth Protocol</h3>
+                <p class="text-gray-400 text-sm">Daily engagement, DM management, local networking, and algorithm optimization that turns followers into leads.</p>
+            </div>
+            <div class="stat-card">
+                <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                </div>
+                <h3 class="text-white font-semibold mb-2">Performance Dashboard</h3>
+                <p class="text-gray-400 text-sm">Monthly reporting that tracks real leads, not vanity metrics. DMs, calls, form fills tied directly to content.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CLIENT WORK IMAGES -->
+<section class="py-4 bg-dark-alt overflow-hidden">
+    <div class="flex gap-4 animate-none">
+        <img src="images/case_study_caputos.jpg" alt="Caputo's" class="h-48 md:h-64 w-auto rounded-xl object-cover flex-shrink-0">
+        <img src="images/discovered_portfolio_vanloy_Flora-13_Compressed.jpg" alt="Vanloy" class="h-48 md:h-64 w-auto rounded-xl object-cover flex-shrink-0">
+        <img src="images/case_study_evangers.jpg" alt="Evanger's" class="h-48 md:h-64 w-auto rounded-xl object-cover flex-shrink-0">
+        <img src="images/discovered_portfolio_caputos_Caputos-South-Elgin-1911.jpg" alt="Caputo's Interior" class="h-48 md:h-64 w-auto rounded-xl object-cover flex-shrink-0">
+        <img src="images/discovered_portfolio_evangers_DSC04754_Compressed.jpg" alt="Evanger's Product" class="h-48 md:h-64 w-auto rounded-xl object-cover flex-shrink-0">
+    </div>
+</section>
+
+<!-- CASE STUDIES / PROOF -->
+<section class="section-padding" id="proof">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <p class="text-gold text-sm font-semibold tracking-widest uppercase mb-3">Proven Results</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Real Results for Real Chicago Businesses</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Caputo's -->
+            <div class="case-card">
+                <img src="images/case_study_caputos.jpg" alt="Angelo Caputo's Fresh Markets" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <span class="text-gold text-xs font-semibold uppercase tracking-wider">Retail / Grocery</span>
+                    <h3 class="text-white font-bold text-xl mt-2 mb-3">Angelo Caputo's Fresh Markets</h3>
+                    <p class="text-gray-400 text-sm mb-4">Family-owned Italian grocery staple serving Chicagoland for generations. Went from sporadic social posting to a content powerhouse.</p>
+                    <div class="flex gap-6">
+                        <div>
+                            <p class="text-gold text-2xl font-bold">17M+</p>
+                            <p class="text-gray-500 text-xs">Impressions</p>
+                        </div>
+                        <div>
+                            <p class="text-gold text-2xl font-bold">747%</p>
+                            <p class="text-gray-500 text-xs">ROAS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Kelly Smile -->
+            <div class="case-card">
+                <div class="p-6 flex flex-col justify-between h-full" style="min-height: 380px;">
+                    <div>
+                        <span class="text-gold text-xs font-semibold uppercase tracking-wider">Health & Wellness</span>
+                        <h3 class="text-white font-bold text-xl mt-2 mb-3">Kelly Smile Design</h3>
+                        <p class="text-gray-400 text-sm mb-6">Transformed social media for a Chicago dental practice, turning inconsistent posting into a consistent patient acquisition channel.</p>
+                    </div>
+                    <div class="bg-black/50 border border-gray-800 rounded-xl p-5">
+                        <p class="text-gray-300 text-sm italic leading-relaxed">"Link Creative has transformed the way we do our social media and how we go about it! Their expertise, helpfulness, and desire to help a small business like ours succeed is unmatched!"</p>
+                        <p class="text-gold text-sm font-semibold mt-3">Dr. John Kelly</p>
+                        <p class="text-gray-500 text-xs">President, Kelly Smile Design</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Vanloy -->
+            <div class="case-card">
+                <img src="images/case_study_vanloy.png" alt="Vanloy" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <span class="text-gold text-xs font-semibold uppercase tracking-wider">Hospitality</span>
+                    <h3 class="text-white font-bold text-xl mt-2 mb-3">Vanloy</h3>
+                    <p class="text-gray-400 text-sm">Luxury mobile bar and catering experience. Built social presence from scratch to become a go-to brand for Chicago events and weddings.</p>
+                </div>
+            </div>
+            <!-- Maadi Law -->
+            <div class="case-card">
+                <div class="p-6 flex flex-col justify-between h-full" style="min-height: 340px;">
+                    <div>
+                        <span class="text-gold text-xs font-semibold uppercase tracking-wider">Professional Services</span>
+                        <h3 class="text-white font-bold text-xl mt-2 mb-3">Maadi Law</h3>
+                        <p class="text-gray-400 text-sm mb-6">Premium videography and content for one of Chicago's most recognized legal brands and their 4th Annual Gala.</p>
+                    </div>
+                    <div class="bg-black/50 border border-gray-800 rounded-xl p-5">
+                        <p class="text-gray-300 text-sm italic leading-relaxed">"Partnering with them on the videography side was one of the best decisions I made. The final result exceeded all expectations."</p>
+                        <p class="text-gold text-sm font-semibold mt-3">Sharif Maadi</p>
+                        <p class="text-gray-500 text-xs">"Chicago's Lawyer", Founder & CEO of Maadi Law</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section-padding bg-dark-alt">
+    <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <p class="text-gold text-sm font-semibold tracking-widest uppercase mb-3">Getting Started</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">How It Works</h2>
+        </div>
+        <div class="space-y-8">
+            <div class="flex gap-6 items-start">
+                <div class="w-12 h-12 bg-gold rounded-xl flex items-center justify-center flex-shrink-0 text-white font-bold text-lg">1</div>
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-1">Book a Free Strategy Call</h3>
+                    <p class="text-gray-400">Fill out the application on this page. We'll review your business, audit your current social presence, and show you how the Content Engine System would work for you.</p>
+                </div>
+            </div>
+            <div class="flex gap-6 items-start">
+                <div class="w-12 h-12 bg-gold rounded-xl flex items-center justify-center flex-shrink-0 text-white font-bold text-lg">2</div>
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-1">We Build Your Content Engine</h3>
+                    <p class="text-gray-400">Our team creates your Brand Voice Blueprint, plans your first content calendar, and schedules your first production session at your location.</p>
+                </div>
+            </div>
+            <div class="flex gap-6 items-start">
+                <div class="w-12 h-12 bg-gold rounded-xl flex items-center justify-center flex-shrink-0 text-white font-bold text-lg">3</div>
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-1">Content Goes Live</h3>
+                    <p class="text-gray-400">Professional content starts publishing across all your platforms. Our team manages engagement, tracks performance, and optimizes the strategy monthly.</p>
+                </div>
+            </div>
+            <div class="flex gap-6 items-start">
+                <div class="w-12 h-12 bg-gold rounded-xl flex items-center justify-center flex-shrink-0 text-white font-bold text-lg">4</div>
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-1">Leads Start Coming In</h3>
+                    <p class="text-gray-400">DMs from potential customers. Comments from people tagging friends. Phone calls from people who found you on Instagram. 50+ qualified leads in 90 days, guaranteed.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section-padding relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5" style="background-image: url('images/discovered_portfolio_vanloy_Flora-5_Compressed.jpg'); background-size: cover; background-position: center;"></div>
+    <div class="relative max-w-3xl mx-auto px-6">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Turn Social Media Into Your Best Customer Acquisition Channel?</h2>
+            <p class="text-gray-400">Book a free strategy call. We'll audit your current social presence and show you exactly how the Content Engine System would work for your business.</p>
+        </div>
+
+        <!-- FORM 2 -->
+        <div class="bg-dark border border-gray-800 rounded-2xl p-8">
+            <div class="progress-bar mb-6"><div id="progress2" class="progress-fill" style="width: 25%"></div></div>
+            <p id="stepLabel2" class="text-xs text-gray-500 mb-4 text-center">Step 1 of 5</p>
+
+            <div id="step2-1" class="form-step active">
+                <p class="text-sm font-semibold text-white mb-4">What industry is your business in?</p>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="form-option" onclick="selectOption2(1,'Restaurant / Hospitality',this)">Restaurant / Hospitality</div>
+                    <div class="form-option" onclick="selectOption2(1,'Retail / E-commerce',this)">Retail / E-commerce</div>
+                    <div class="form-option" onclick="selectOption2(1,'Health & Wellness',this)">Health & Wellness</div>
+                    <div class="form-option" onclick="selectOption2(1,'Home Services',this)">Home Services</div>
+                    <div class="form-option" onclick="selectOption2(1,'Professional Services',this)">Professional Services</div>
+                    <div class="form-option" onclick="selectOption2(1,'Other',this)">Other</div>
+                </div>
+            </div>
+
+            <div id="step2-2" class="form-step">
+                <p class="text-sm font-semibold text-white mb-4">How are you currently handling your social media?</p>
+                <div class="grid gap-3">
+                    <div class="form-option" onclick="selectOption2(2,'We do it ourselves',this)">We do it ourselves (inconsistently)</div>
+                    <div class="form-option" onclick="selectOption2(2,'In-house',this)">We have someone in-house</div>
+                    <div class="form-option" onclick="selectOption2(2,'Freelancer/agency',this)">We use a freelancer or agency</div>
+                    <div class="form-option" onclick="selectOption2(2,'Nothing',this)">We're not doing anything right now</div>
+                </div>
+            </div>
+
+            <div id="step2-3" class="form-step">
+                <p class="text-sm font-semibold text-white mb-4">What's your biggest challenge with social media?</p>
+                <div class="grid gap-3">
+                    <div class="form-option" onclick="selectOption2(3,'No time',this)">No time to post consistently</div>
+                    <div class="form-option" onclick="selectOption2(3,'Quality',this)">Content doesn't look professional</div>
+                    <div class="form-option" onclick="selectOption2(3,'No results',this)">Not seeing results from what we post</div>
+                    <div class="form-option" onclick="selectOption2(3,'No strategy',this)">Don't know what strategy to follow</div>
+                </div>
+            </div>
+
+            <div id="step2-4" class="form-step">
+                <p class="text-sm font-semibold text-white mb-4">When are you looking to get started?</p>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="form-option" onclick="selectOption2(4,'Immediately',this)">Immediately</div>
+                    <div class="form-option" onclick="selectOption2(4,'Within 30 days',this)">Within 30 days</div>
+                    <div class="form-option" onclick="selectOption2(4,'Within 90 days',this)">Within 90 days</div>
+                    <div class="form-option" onclick="selectOption2(4,'Just exploring',this)">Just exploring</div>
+                </div>
+            </div>
+
+            <div id="step2-5" class="form-step">
+                <p class="text-sm font-semibold text-white mb-4">Almost there. Where should we send your strategy call details?</p>
+                <div class="space-y-3">
+                    <div class="grid grid-cols-2 gap-3">
+                        <input type="text" class="form-input" placeholder="First Name" id="fname2">
+                        <input type="text" class="form-input" placeholder="Last Name" id="lname2">
+                    </div>
+                    <input type="email" class="form-input" placeholder="Email" id="email2">
+                    <input type="tel" class="form-input" placeholder="Phone Number" id="phone2">
+                    <button class="btn-gold w-full text-center mt-2" onclick="submitForm2()">Book My Free Strategy Call</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-padding bg-dark-alt" id="faq">
+    <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-12">
+            <p class="text-gold text-sm font-semibold tracking-widest uppercase mb-3">FAQ</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+        </div>
+        <div class="space-y-3">
+            <div class="border border-gray-800 rounded-xl overflow-hidden">
+                <button class="w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                    <span class="text-white font-semibold text-sm">How quickly will I see results?</span>
+                    <svg class="w-5 h-5 text-gold faq-chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-answer px-5 pb-5">
+                    <p class="text-gray-400 text-sm">Most clients see a measurable increase in engagement within the first 30 days. By day 60, inbound DMs and inquiries typically increase by 3x. By day 90, most clients are generating 50+ qualified leads per month.</p>
+                </div>
+            </div>
+            <div class="border border-gray-800 rounded-xl overflow-hidden">
+                <button class="w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                    <span class="text-white font-semibold text-sm">What if I've been burned by an agency before?</span>
+                    <svg class="w-5 h-5 text-gold faq-chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-answer px-5 pb-5">
+                    <p class="text-gray-400 text-sm">We hear this a lot. That's why we guarantee 50 qualified leads in 90 days, or we manage your accounts for free until we hit that number. We're a 7-person team with our own studios right here in Chicago. No junior coordinators juggling 30 other accounts.</p>
+                </div>
+            </div>
+            <div class="border border-gray-800 rounded-xl overflow-hidden">
+                <button class="w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                    <span class="text-white font-semibold text-sm">How much time do I need to invest?</span>
+                    <svg class="w-5 h-5 text-gold faq-chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-answer px-5 pb-5">
+                    <p class="text-gray-400 text-sm">One content production session per month at your location. That's it. We handle strategy, editing, posting, engagement, and reporting for the other 29 days.</p>
+                </div>
+            </div>
+            <div class="border border-gray-800 rounded-xl overflow-hidden">
+                <button class="w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                    <span class="text-white font-semibold text-sm">How do you measure ROI on organic social?</span>
+                    <svg class="w-5 h-5 text-gold faq-chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-answer px-5 pb-5">
+                    <p class="text-gray-400 text-sm">We track inbound leads (DMs, comments asking about services, form fills, phone calls) tied directly to social content. Every month, your Performance Dashboard shows exactly how many potential customers your content generated.</p>
+                </div>
+            </div>
+            <div class="border border-gray-800 rounded-xl overflow-hidden">
+                <button class="w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                    <span class="text-white font-semibold text-sm">Why Link Creative instead of a cheaper freelancer?</span>
+                    <svg class="w-5 h-5 text-gold faq-chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-answer px-5 pb-5">
+                    <p class="text-gray-400 text-sm">We're a full team with our own production studios. We shoot on location in Chicago, know the local market, and guarantee results. A freelancer can't offer that. You get strategists, producers, editors, and account managers for less than one full-time hire.</p>
+                </div>
+            </div>
+            <div class="border border-gray-800 rounded-xl overflow-hidden">
+                <button class="w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                    <span class="text-white font-semibold text-sm">What platforms do you manage?</span>
+                    <svg class="w-5 h-5 text-gold faq-chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-answer px-5 pb-5">
+                    <p class="text-gray-400 text-sm">Facebook, Instagram, LinkedIn, and YouTube. We create platform-native content for each one, not the same post copied across all four.</p>
+                </div>
+            </div>
+            <div class="border border-gray-800 rounded-xl overflow-hidden">
+                <button class="w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                    <span class="text-white font-semibold text-sm">What's the minimum commitment?</span>
+                    <svg class="w-5 h-5 text-gold faq-chevron flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-answer px-5 pb-5">
+                    <p class="text-gray-400 text-sm">We ask for a 3-month minimum engagement. Our system needs at least 90 days to generate the compounding results that make organic social so powerful. After that, it's month-to-month.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-gray-800 py-12">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div>
+                <img src="images/logo_white.png" alt="Link Creative" class="h-6 mb-4">
+                <p class="text-gray-500 text-sm leading-relaxed">A modern digital growth agency built for local businesses in Chicago. Creative. Production. Performance. All under one roof.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold text-sm mb-4">Contact</h4>
+                <p class="text-gray-500 text-sm mb-1">350 W Ontario Street, Suite 5E</p>
+                <p class="text-gray-500 text-sm mb-3">Chicago, IL 60654</p>
+                <p class="text-gray-500 text-sm">info@linkcreativeco.com</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold text-sm mb-4">Links</h4>
+                <div class="flex flex-col gap-2">
+                    <a href="https://linkcreativeco.com" class="text-gray-500 text-sm hover:text-gold transition">Home</a>
+                    <a href="https://linkcreativeco.com/about/" class="text-gray-500 text-sm hover:text-gold transition">About</a>
+                    <a href="https://linkcreativeco.com/work-2/" class="text-gray-500 text-sm hover:text-gold transition">Work</a>
+                    <a href="https://linkcreativeco.com/contact-us/" class="text-gray-500 text-sm hover:text-gold transition">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8">
+            <p class="text-gray-600 text-xs text-center">Results vary by business and market. Past performance does not guarantee future results. The 50-lead guarantee is subject to client compliance with agreed-upon stipulations including content approval timelines and lead response requirements.</p>
+            <p class="text-gray-600 text-xs text-center mt-3">LinkCreative. All Rights Reserved. &copy; 2026</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Form 1
+let currentStep1 = 1;
+const totalSteps1 = 5;
+const answers1 = {};
+
+function selectOption(step, value, el) {
+    answers1[step] = value;
+    const siblings = el.parentElement.querySelectorAll('.form-option');
+    siblings.forEach(s => s.classList.remove('selected'));
+    el.classList.add('selected');
+    setTimeout(() => goToStep1(step + 1), 300);
+}
+
+function goToStep1(step) {
+    document.getElementById('step1-' + currentStep1).classList.remove('active');
+    document.getElementById('step1-' + step).classList.add('active');
+    currentStep1 = step;
+    document.getElementById('progress1').style.width = (step / totalSteps1 * 100) + '%';
+    document.getElementById('stepLabel1').textContent = 'Step ' + step + ' of ' + totalSteps1;
+}
+
+function submitForm1() {
+    window.location.href = '/thankyou';
+}
+
+// Form 2
+let currentStep2 = 1;
+const answers2 = {};
+
+function selectOption2(step, value, el) {
+    answers2[step] = value;
+    const siblings = el.parentElement.querySelectorAll('.form-option');
+    siblings.forEach(s => s.classList.remove('selected'));
+    el.classList.add('selected');
+    setTimeout(() => goToStep2(step + 1), 300);
+}
+
+function goToStep2(step) {
+    document.getElementById('step2-' + currentStep2).classList.remove('active');
+    document.getElementById('step2-' + step).classList.add('active');
+    currentStep2 = step;
+    document.getElementById('progress2').style.width = (step / totalSteps1 * 100) + '%';
+    document.getElementById('stepLabel2').textContent = 'Step ' + step + ' of ' + totalSteps1;
+}
+
+function submitForm2() {
+    window.location.href = '/thankyou';
+}
+
+// FAQ
+function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const chevron = btn.querySelector('.faq-chevron');
+    answer.classList.toggle('open');
+    chevron.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
